@@ -3,8 +3,9 @@
 <head>
     <title>Flow-transducer</title>
     <link rel="stylesheet" href="style-flow.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 </head>
-<body>
+<body align = "center">
     <p class="nameflow1"></p>
     <p class="typeflow1"></p>
     <p class="unitflow1"></p>
@@ -25,9 +26,7 @@
     <p class="rangeflow3"></p>
     <p class="plantsiteflow3"></p>
     <p class="valueflow3"></p>
-
     <button class="button1" onclick="location.href='home.html'">BACK</button>
-
     <script>
         document.addEventListener('DOMContentLoaded',function(){
             fetch('https://midterm-exam-010723313-2022.herokuapp.com/device?sensor_type=flow-transducer')
@@ -79,5 +78,12 @@
             });
         });
     </script>
+</body>
+<body>
+    <figure>
+        <div>
+            <img src="tom.png" class="tom">
+            <div class="tom-shadow"></div>
+    </figure>
 </body>
 </html>

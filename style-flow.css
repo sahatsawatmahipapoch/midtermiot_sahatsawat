@@ -1,22 +1,95 @@
+body 
+  {
+      background-color: #000000;
+      background-image : url(https://w0.peakpx.com/wallpaper/225/640/HD-wallpaper-spiderman-avengers-avengers-endgame-blue-hero-marvel-movie-red-spider.jpg);
+      background-size:cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 0px;
+      font-family: 'Sedgwick Ave Display', cursive;
+      font-size:18px;
+      color:rgb(255, 220, 19);
+  }
+:root {
+  --clr-neon: rgb(241, 43, 43);
+  --clr-bg: rgb(27, 27, 23);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.tom{
+  height: 450px;
+  width: 350px;
+  margin-left: -1200px;
+  margin-top: -3000px;
+  transform: rotate(25deg);
+  transform-origin: top;
+  animation: tom 6s linear infinite;
+}
+
+.tom-shadow{
+  position: absolute;
+  height: 5px;
+  width: 200px;
+  border-radius: 50%;
+  top: 550px;
+  bottom: 100px;
+  left: 210px;
+  box-shadow: 0px 0px 30px black;
+  background: rgba(0, 0, 0, 0.4);
+  animation: tom-shadow 6s linear infinite;
+}
+@keyframes tom{
+  0%{transform: rotate(5deg);}
+  50%{transform: rotate(-5deg);}
+  100%{transform: rotate(5deg);}
+}
 .button1 {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-  }
-  
-  .button1:hover {background-color: #3e8e41}
-  
-  .button1:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+  font-size:40px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+  margin: 30px;
+}
+.button1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.button1:hover,
+.button1:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.button1:hover::before,
+.button1:focus::before {
+  opacity: 1;
+}
+.button1:hover::after,
+.button1:focus::after {
+  opacity: 1;
+}

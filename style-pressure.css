@@ -1,0 +1,70 @@
+body 
+  {
+      background-color: #000000;
+      background-image : url(https://img.wallpapersafari.com/desktop/1600/900/0/9/G2bDya.jpg);
+      background-size:cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 0px;
+      font-family: 'Sedgwick Ave Display', cursive;
+      font-size:18px;
+      color:rgb(223, 193, 25);
+  }
+ 
+  :root {
+    --clr-neon: rgb(92, 9, 224);
+    --clr-bg: rgb(0, 0, 0);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  .button4 {
+    font-size:40px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+  
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  
+    position: relative;
+    margin: 30px;
+  }
+  .button4:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -1;
+    transition: opacity 100ms linear;
+  }
+  
+  .button4:hover,
+  .button4:focus {
+    color: var(--clr-bg);
+    text-shadow: none;
+  }
+  
+  .button4:hover::before,
+  .button4:focus::before {
+    opacity: 1;
+  }
+  .button4:hover::after,
+  .button4:focus::after {
+    opacity: 1;
+  }
+  

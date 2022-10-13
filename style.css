@@ -2,6 +2,16 @@
 {
 
 }
+:root {
+  --clr-neon: rgb(241, 43, 43);
+  --clr-bg: rgb(27, 27, 23);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body 
 {
     background-color: #000000;
@@ -10,6 +20,9 @@ body
     background-position: center;
     background-attachment: fixed;
     padding: 0px;
+    font-family: 'THE AMAZING SPIDER-MAN', sans-serif;
+    font-size:40px;
+    color:rgb(233, 201, 19);
 }
 .bg{
   margin-left:330px;
@@ -65,159 +78,239 @@ img{
   100%{transform: scale(0)
   }
 }
+
 .flowbut {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #56bcd6;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 18px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  .flowbut span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .flowbut span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .flowbut:hover span {
-    padding-right: 25px;
-  }
-  
-  .flowbut:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  .levelbut {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #39b0ce;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 18px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  .levelbut span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .levelbut span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .levelbut:hover span {
-    padding-right: 25px;
-  }
-  
-  .levelbut:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  .tempbut {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #2289a3;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 18px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  .tempbut span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .tempbut span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .tempbut:hover span {
-    padding-right: 25px;
-  }
-  
-  .tempbut:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  .psbut {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #0c5f74;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 18px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  .psbut span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .psbut span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .psbut:hover span {
-    padding-right: 25px;
-  }
-  
-  .psbut:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+  font-size:40px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+  margin: 30px;
+}
+
+.flowbut:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.flowbut:hover,
+.flowbut:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.flowbut:hover::before,
+.flowbut:focus::before {
+  opacity: 1;
+}
+.flowbut:hover::after,
+.flowbut:focus::after {
+  opacity: 1;
+}
+.levelbut {
+  font-size:40px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+  margin: 30px;
+}
+
+.levelbut:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.levelbut:hover,
+.levelbut:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.levelbut:hover::before,
+.levelbut:focus::before {
+  opacity: 1;
+}
+.levelbut:hover::after,
+.levelbut:focus::after {
+  opacity: 1;
+}
+.tempbut {
+  font-size:40px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+  margin: 30px;
+}
+
+.tempbut:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.tempbut:hover,
+.tempbut:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.tempbut:hover::before,
+.tempbut:focus::before {
+  opacity: 1;
+}
+.tempbut:hover::after,
+.tempbut:focus::after {
+  opacity: 1;
+} 
+.psbut {
+  font-size:40px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+  margin: 30px;
+}
+
+.psbut:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.psbut:hover,
+.psbut:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.psbut:hover::before,
+.psbut:focus::before {
+  opacity: 1;
+}
+.psbut:hover::after,
+.psbut:focus::after {
+  opacity: 1;
+} 
+.sentbut {
+  font-size:40px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+  margin: 30px;
+}
+
+.sentbut:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.sentbut:hover,
+.sentbut:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.sentbut:hover::before,
+.sentbut:focus::before {
+  opacity: 1;
+}
+.sentbut:hover::after,
+.sentbut:focus::after {
+  opacity: 1;
+}
