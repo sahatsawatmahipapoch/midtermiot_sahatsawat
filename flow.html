@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flow-transducer</title>
+    <link rel="stylesheet" href="style-flow.css">
+</head>
+<body>
+    <p class="nameflow1"></p>
+    <p class="typeflow1"></p>
+    <p class="unitflow1"></p>
+    <p class="rangeflow1"></p>
+    <p class="plantsiteflow1"></p>
+    <p class="valueflow1"></p>
+<br>
+    <p class="nameflow2"></p>
+    <p class="typeflow2"></p>
+    <p class="unitflow2"></p>
+    <p class="rangeflow2"></p>
+    <p class="plantsiteflow2"></p>
+    <p class="valueflow2"></p>
+<br>
+    <p class="nameflow3"></p>
+    <p class="typeflow3"></p>
+    <p class="unitflow3"></p>
+    <p class="rangeflow3"></p>
+    <p class="plantsiteflow3"></p>
+    <p class="valueflow3"></p>
+
+    <button class="button1" onclick="location.href='home.html'">BACK</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            fetch('https://midterm-exam-010723313-2022.herokuapp.com/device?sensor_type=flow-transducer')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                var nameflow4 = data[0].name;
+                var typeflow4 = data[0].type;
+                var unitflow4 = data[0].unit;
+                var rangeflow4 = data[0].range;
+                var plantsiteflow4 = data[0]["plant-site"];
+                var valueflow4 = data[0].value;
+
+                var nameflow5 = data[1].name;
+                var typeflow5 = data[1].type;
+                var unitflow5 = data[1].unit;
+                var rangeflow5 = data[1].range;
+                var plantsiteflow5 = data[1]["plant-site"];
+                var valueflow5 = data[1].value;
+
+                var nameflow6 = data[2].name;
+                var typeflow6 = data[2].type;
+                var unitflow6 = data[2].unit;
+                var rangeflow6 = data[2].range;
+                var plantsiteflow6 = data[2]["plant-site"];
+                var valueflow6 = data[2].value;
+
+    document.querySelector('.nameflow1').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${nameflow4} `;
+    document.querySelector('.typeflow1').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typeflow4} `;
+    document.querySelector('.unitflow1').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unitflow4} `;
+    document.querySelector('.rangeflow1').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangeflow4} `;
+    document.querySelector('.plantsiteflow1').innerHTML  = `plant-site : ${plantsiteflow4} `;
+    document.querySelector('.valueflow1').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valueflow4} `;
+
+    document.querySelector('.nameflow2').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${nameflow5} `;
+    document.querySelector('.typeflow2').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typeflow5} `;
+    document.querySelector('.unitflow2').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unitflow5} `;
+    document.querySelector('.rangeflow2').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangeflow5} `;
+    document.querySelector('.plantsiteflow2').innerHTML  = `plant-site : ${plantsiteflow5} `;
+    document.querySelector('.valueflow2').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valueflow5} `;
+
+    document.querySelector('.nameflow3').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${nameflow6} `;
+    document.querySelector('.typeflow3').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typeflow6} `;
+    document.querySelector('.unitflow3').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unitflow6} `;
+    document.querySelector('.rangeflow3').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangeflow6} `;
+    document.querySelector('.plantsiteflow3').innerHTML  = `plant-site : ${plantsiteflow6} `;
+    document.querySelector('.valueflow3').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valueflow6} `;
+            });
+        });
+    </script>
+</body>
+</html>

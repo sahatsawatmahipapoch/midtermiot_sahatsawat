@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Level-transducer</title>
+    <link rel="stylesheet" href="style-temp.css">
+</head>
+<body>
+    <p class="nametemp1"></p>
+    <p class="typetemp1"></p>
+    <p class="unittemp1"></p>
+    <p class="rangetemp1"></p>
+    <p class="plantsitetemp1"></p>
+    <p class="valuetemp1"></p>
+<br>
+    <p class="nametemp2"></p>
+    <p class="typetemp2"></p>
+    <p class="unittemp2"></p>
+    <p class="rangetemp2"></p>
+    <p class="plantsitetemp2"></p>
+    <p class="valuetemp2"></p>
+<br>
+    <p class="nametemp3"></p>
+    <p class="typetemp3"></p>
+    <p class="unittemp3"></p>
+    <p class="rangetemp3"></p>
+    <p class="plantsitetemp3"></p>
+    <p class="valuetemp3"></p>
+
+    <button onclick="location.href='home.html'">BACK</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            fetch('https://midterm-exam-010723313-2022.herokuapp.com/device?sensor_type=temperature-transducer')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                var nametemp4 = data[0].name;
+                var typetemp4 = data[0].type;
+                var unittemp4 = data[0].unit;
+                var rangetemp4 = data[0].range;
+                var plantsitetemp4 = data[0]["plant-site"];
+                var valuetemp4 = data[0].value;
+
+                var nametemp5 = data[1].name;
+                var typetemp5 = data[1].type;
+                var unittemp5 = data[1].unit;
+                var rangetemp5 = data[1].range;
+                var plantsitetemp5 = data[1]["plant-site"];
+                var valuetemp5 = data[1].value;
+
+                var nametemp6 = data[2].name;
+                var typetemp6 = data[2].type;
+                var unittemp6 = data[2].unit;
+                var rangetemp6 = data[2].range;
+                var plantsitetemp6 = data[2]["plant-site"];
+                var valuetemp6 = data[2].value;
+
+    document.querySelector('.nametemp1').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${nametemp4} `;
+    document.querySelector('.typetemp1').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typetemp4} `;
+    document.querySelector('.unittemp1').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unittemp4} `;
+    document.querySelector('.rangetemp1').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangetemp4} `;
+    document.querySelector('.plantsitetemp1').innerHTML  = `plant-site : ${plantsitetemp4} `;
+    document.querySelector('.valuetemp1').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valuetemp4} `;
+
+    document.querySelector('.nametemp2').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${nametemp5} `;
+    document.querySelector('.typetemp2').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typetemp5} `;
+    document.querySelector('.unittemp2').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unittemp5} `;
+    document.querySelector('.rangetemp2').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangetemp5} `;
+    document.querySelector('.plantsitetemp2').innerHTML  = `plant-site : ${plantsitetemp5} `;
+    document.querySelector('.valuetemp2').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valuetemp5} `;
+
+    document.querySelector('.nametemp3').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${nametemp6} `;
+    document.querySelector('.typetemp3').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typetemp6} `;
+    document.querySelector('.unittemp3').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unittemp6} `;
+    document.querySelector('.rangetemp3').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangetemp6} `;
+    document.querySelector('.plantsitetemp3').innerHTML  = `plant-site : ${plantsitetemp6} `;
+    document.querySelector('.valuetemp3').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valuetemp6} `;
+            });
+        });
+    </script>
+</body>
+</html>

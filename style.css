@@ -1,0 +1,223 @@
+.text
+{
+
+}
+body 
+{
+    background-color: #000000;
+    background-image : url(https://i.pinimg.com/originals/56/24/da/5624da1e90a6855c0879dc6f41073748.jpg);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0px;
+}
+.bg{
+  margin-left:330px;
+  width: 400px;
+  z-index: -1;
+}
+img{
+  position: absolute;
+}
+.miles{
+  height: 550px;
+  width: 550px;
+  margin-left: -800px;
+  margin-top: -100px;
+  animation: miles 10s linear infinite;
+}
+.miles-shadow{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  height: 10px;
+  width: 200px;
+  border-radius: 50%;
+  top: 550px;
+  bottom: 100px;
+  left: 150px;
+  transform: scale(1.0);
+  box-shadow: 0px 0px 30px black;
+  animation: miles-shadow 10s linear infinite;
+}
+@keyframes miles{
+  0%{margin-top: -600px;}
+  25%{margin-top: -15px;}
+  50%{margin-top: -100px;}
+  75%{margin-top: -15px;}
+  100%{margin-top: -600px;}
+}
+@keyframes miles-shadow{
+  0%{
+    transform: scale(0);
+  }
+  25%{
+    transform: scale(1.0);
+  }
+  50%{
+    transform: scale(0.5);
+  }
+  75%{
+    transform: scale(1.0);
+  }
+  85%{
+    transform: scale(0);
+  }
+  100%{transform: scale(0)
+  }
+}
+.flowbut {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #56bcd6;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .flowbut span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .flowbut span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .flowbut:hover span {
+    padding-right: 25px;
+  }
+  
+  .flowbut:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .levelbut {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #39b0ce;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .levelbut span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .levelbut span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .levelbut:hover span {
+    padding-right: 25px;
+  }
+  
+  .levelbut:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .tempbut {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #2289a3;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .tempbut span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .tempbut span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .tempbut:hover span {
+    padding-right: 25px;
+  }
+  
+  .tempbut:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .psbut {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #0c5f74;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .psbut span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .psbut span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .psbut:hover span {
+    padding-right: 25px;
+  }
+  
+  .psbut:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

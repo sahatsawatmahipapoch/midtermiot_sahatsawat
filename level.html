@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Level-transducer</title>
+    <link rel="stylesheet" href="style-level.css">
+</head>
+<body>
+    <p class="namelevel1"></p>
+    <p class="typelevel1"></p>
+    <p class="unitlevel1"></p>
+    <p class="rangelevel1"></p>
+    <p class="plantsitelevel1"></p>
+    <p class="valuelevel1"></p>
+<br>
+    <p class="namelevel2"></p>
+    <p class="typelevel2"></p>
+    <p class="unitlevel2"></p>
+    <p class="rangelevel2"></p>
+    <p class="plantsitelevel2"></p>
+    <p class="valuelevel2"></p>
+<br>
+    <p class="namelevel3"></p>
+    <p class="typelevel3"></p>
+    <p class="unitlevel3"></p>
+    <p class="rangelevel3"></p>
+    <p class="plantsitelevel3"></p>
+    <p class="valuelevel3"></p>
+
+    <button onclick="location.href='home.html'">BACK</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            fetch('https://midterm-exam-010723313-2022.herokuapp.com/device?sensor_type=level-transducer')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                var namelevel4 = data[0].name;
+                var typelevel4 = data[0].type;
+                var unitlevel4 = data[0].unit;
+                var rangelevel4 = data[0].range;
+                var plantsitelevel4 = data[0]["plant-site"];
+                var valuelevel4 = data[0].value;
+
+                var namelevel5 = data[1].name;
+                var typelevel5 = data[1].type;
+                var unitlevel5 = data[1].unit;
+                var rangelevel5 = data[1].range;
+                var plantsitelevel5 = data[1]["plant-site"];
+                var valuelevel5 = data[1].value;
+
+                var namelevel6 = data[2].name;
+                var typelevel6 = data[2].type;
+                var unitlevel6 = data[2].unit;
+                var rangelevel6 = data[2].range;
+                var plantsitelevel6 = data[2]["plant-site"];
+                var valuelevel6 = data[2].value;
+
+    document.querySelector('.namelevel1').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${namelevel4} `;
+    document.querySelector('.typelevel1').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typelevel4} `;
+    document.querySelector('.unitlevel1').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unitlevel4} `;
+    document.querySelector('.rangelevel1').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangelevel4} `;
+    document.querySelector('.plantsitelevel1').innerHTML  = `plant-site : ${plantsitelevel4} `;
+    document.querySelector('.valuelevel1').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valuelevel4} `;
+
+    document.querySelector('.namelevel2').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${namelevel5} `;
+    document.querySelector('.typelevel2').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typelevel5} `;
+    document.querySelector('.unitlevel2').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unitlevel5} `;
+    document.querySelector('.rangelevel2').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangelevel5} `;
+    document.querySelector('.plantsitelevel2').innerHTML  = `plant-site : ${plantsitelevel5} `;
+    document.querySelector('.valuelevel2').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valuelevel5} `;
+
+    document.querySelector('.namelevel3').innerHTML  = `name &nbsp;&nbsp;&nbsp; : ${namelevel6} `;
+    document.querySelector('.typelevel3').innerHTML  = `type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${typelevel6} `;
+    document.querySelector('.unitlevel3').innerHTML  = `unit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : ${unitlevel6} `;
+    document.querySelector('.rangelevel3').innerHTML  = `range &nbsp;&nbsp;&nbsp;&nbsp; : ${rangelevel6} `;
+    document.querySelector('.plantsitelevel3').innerHTML  = `plant-site : ${plantsitelevel6} `;
+    document.querySelector('.valuelevel3').innerHTML  = `value &nbsp;&nbsp;&nbsp;&nbsp; : ${valuelevel6} `;
+            });
+        });
+    </script>
+</body>
+</html>
