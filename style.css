@@ -16,7 +16,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 250%;
+  width: 200%;
   padding: 0px 0px;
   z-index: -1000;
   display: flex;
@@ -44,9 +44,6 @@
 body 
 {
     background-color: #000000;
-    background-image : url(https://i.pinimg.com/originals/56/24/da/5624da1e90a6855c0879dc6f41073748.jpg);
-    background-size:cover;
-    background-position: center;
     background-attachment: fixed;
     padding: 0px;
     font-family: 'THE AMAZING SPIDER-MAN', sans-serif;
