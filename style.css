@@ -11,6 +11,35 @@
 *::before,
 *::after {
   box-sizing: border-box;
+} 
+#videoBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250%;
+  padding: 0px 0px;
+  z-index: -1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+      width:100%;
+      height:auto;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+      width:100%;
+      height:auto;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+      width:100%;
+      height:auto;
+  }
 }
 body 
 {
@@ -25,8 +54,9 @@ body
     color:rgb(233, 201, 19);
 }
 .bg{
-  margin-left:330px;
-  width: 400px;
+  margin-left:700px;
+  margin-buttom: 500px;
+  width: 100px;
   z-index: -1;
 }
 img{

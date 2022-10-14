@@ -21,6 +21,22 @@ body
   *::after {
     box-sizing: border-box;
   }
+  .spifar{
+    height: 350px;
+    width: 350px;
+    margin-left: -800px;
+    margin-top: -900px;
+    margin-bottom: 800px;
+    animation: spifar 8s linear infinite;
+  }
+  @keyframes spifar{
+    0%{margin-bottom: 90px;}
+    25%{margin-bottom: 60px;}
+    50%{margin-bottom: -200px;}
+    75%{margin-bottom: 60px;}
+    100%{margin-bottom: 90px;}
+  }
+
   .button3 {
     font-size:40px;
     font-family: 'Sedgwick Ave Display', cursive;
